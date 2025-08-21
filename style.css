@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #000;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.display-container {
+    background: #000;
+    padding: 20px;
+    min-height: 140px;
+}
+
+.operation-display {
+    color: #666;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: right;
+    padding: 10px 0;
+    min-height: 30px;
+    overflow: hidden;
+}
+
+.display {
+    color: white;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: right;
+    padding: 10px 0;
+    min-height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    background: #333;
+    color: white;
+}
+
+.btn-number:hover {
+    background: #404040;
+}
+
+.btn-function {
+    background: #a6a6a6;
+    color: black;
+    font-weight: 500;
+}
+
+.btn-function:hover {
+    background: #b8b8b8;
+}
+
+.btn-operator {
+    background: #ff9500;
+    color: white;
+    font-weight: 500;
+}
+
+.btn-operator:hover {
+    background: #ffad33;
+}
+
+.btn-operator.active {
+    background: white;
+    color: #ff9500;
+}
+
+.btn-zero {
+    border-radius: 35px;
+    grid-column: span 2;
+    width: 152px;
+    justify-content: flex-start;
+    padding-left: 28px;
+}
+
+@media (max-width: 360px) {
+    .btn {
+        height: 60px;
+        width: 60px;
+        font-size: 28px;
+    }
+    
+    .btn-zero {
+        width: 132px;
+        padding-left: 24px;
+    }
+    
+    .display {
+        font-size: 40px;
+    }
+}
