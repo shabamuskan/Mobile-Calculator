@@ -29,4 +29,4 @@ It mimics a modern mobile calculator with smooth UI, operator highlighting, and 
 
 ---
 
-## 📂 Project Structure
+
